@@ -63,3 +63,44 @@ This repository documents my transition to full-time bioinformatics. I am commit
 ### FASTQ File Format Verification
 
 Each file contains 3 complete reads in the following format:
+@seq1.1 length=100
+ACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGTACGT
++
+IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+
+
+**Format:** 4 lines per read  
+**Read length:** 100 bp  
+**Quality scores:** All `I` (Phred score 40, highest quality)  
+**File size:** 3 reads per file (small for testing)
+
+### Lessons Learned
+
+- Bioinformatics is 50% troubleshooting. Data downloads fail; being able to adapt is a core skill
+- FASTQ format must be exact: 4 lines per read, no exceptions
+- Version control (Git/GitHub) is essential for reproducibility and documentation
+- The GitHub web interface has multiple ways to perform the same action; understanding the file list → checkbox → "..." → "Delete files" path is useful
+
+### Next Steps
+
+- Quality control with FastQC and MultiQC
+- Taxonomic classification with Kraken2 and Bracken
+- Upload results and update documentation
+
+---
+
+## Skills Tracked
+
+- [ ] Python (pandas, numpy, scikit-learn)
+- [ ] R (tidyverse, Seurat)
+- [ ] Single-cell (Scanpy, Seurat)
+- [ ] Metagenomics (QIIME2, DADA2)
+- [ ] Nextflow / Snakemake
+- [ ] AWS / Cloud computing
+- [ ] Docker / Containerization
+
+---
+
+## Contact
+
+[GitHub: github.com/AlanaAnnaman](https://github.com/AlanaAnnaman)
