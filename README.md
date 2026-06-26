@@ -94,16 +94,27 @@ IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
 
 ---
 
-### Step 2 Results: Quality Control
+### Project Log: Step 2 – Quality Control (FastQC + MultiQC)
 
-| Metric | sample_1.fastq | sample_2.fastq |
-|--------|----------------|----------------|
-| Total Sequences | 10,000 | 10,000 |
-| Sequences flagged as poor quality | 0 | 0 |
-| Sequence length | 104 bp | 103 bp |
-| %GC | 50% | 50% |
+**Date:** June 23, 2025  
+**Time Invested:** 2 hours  
+**Status:** Complete
 
-**Conclusion:** All reads passed QC. Ready for taxonomic classification.
+#### Objectives
+
+- Install FastQC and MultiQC
+- Run quality control on synthetic paired-end FASTQ files
+- Generate and review QC reports
+- Upload results to GitHub
+
+#### Commands Used
+
+```bash
+# Run FastQC
+fastqc sample_1.fastq sample_2.fastq
+
+# Run MultiQC
+multiqc . -o .
 
 ### Project Log: Step 3 – Taxonomic Classification (Kraken2)
 
@@ -136,7 +147,7 @@ kraken2-build --db . --build --threads 2
 # Run Kraken2 (test mode)
 kraken2 --db /tmp --paired sample_1.fastq sample_2.fastq
 
-###Step 4 – Real Data Analysis
+### Project Log: Step 4 – Real Data Analysis
 
 **Date:** June 25, 2025  
 **Time Invested:** 2 hours  
@@ -147,6 +158,13 @@ kraken2 --db /tmp --paired sample_1.fastq sample_2.fastq
 - Download real metagenomic data
 - Run QC on real data
 
+#### Challenges Encountered
+
+| Challenge | Resolution |
+|-----------|------------|
+| Download was single-end instead of paired-end | Used single-end mode for analysis |
+| Kraken2 database unavailable | Will download overnight |
+
 #### Results
 
 | Metric | Value |
@@ -156,11 +174,55 @@ kraken2 --db /tmp --paired sample_1.fastq sample_2.fastq
 | File size | 113 MB |
 | QC status | Complete |
 
+#### Files Generated
+
+| File | Purpose |
+|------|---------|
+| `SRR22470507_fastqc.html` | QC report for real data |
+| `multiqc_report.html` | Combined QC summary |
+
 #### Next Steps
 
 - Download full Kraken2 database
 - Run Kraken2 on real data
 - Identify organisms
+
+---
+
+
+### Project Log: Step 5 – Interpretation and Visualization
+
+**Date:** June 26, 2025  
+**Time Invested:** 2 hours  
+**Status:** Complete
+
+#### Objectives
+
+- Learn to interpret taxonomic classification results
+- Create a visualization template
+- Document the interpretation process
+
+#### What Was Learned
+
+- Kraken2 reports show percentage of reads classified at each taxonomic level
+- Top species represent the most abundant organisms in the sample
+- Interpretation requires knowledge of clinical relevance
+- Krona visualizations provide interactive exploration
+
+#### Files Created
+
+| File | Purpose |
+|------|---------|
+| `mock_kraken_report.txt` | Template for interpreting Kraken2 results |
+| `krona_template.html` | Template for interactive visualization |
+
+#### Next Steps
+
+- Download full Kraken2 database
+- Run Kraken2 on real data
+- Replace mock data with real results
+
+---
 
 
 ## Skills Tracked
