@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Krona Visualization Template</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .taxon { margin: 10px 0; padding: 10px; background: #f5f5f5; border-radius: 5px; }
+        .bar { background: #4CAF50; height: 20px; border-radius: 3px; }
+        .percentage { float: right; }
+        h1 { color: #333; }
+        .note { color: #666; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Krona Visualization - Taxonomic Classification</h1>
+        <p class="note">This is a template visualization. Replace with actual Kraken2 results.</p>
+        
+        <h2>Sample: SRR22470507</h2>
+        <p>Total classified reads: 987,654 (80.00%)</p>
+        
+        <h3>Top 10 Species</h3>
+        
+        <div class="taxon">
+            <span>Escherichia coli <span class="percentage">25.4%</span></span>
+            <div class="bar" style="width: 25.4%;"></div>
+        </div>
+        
+        <div class="taxon">
+            <span>Staphylococcus aureus <span class="percentage">18.2%</span></span>
+            <div class="bar" style="width: 18.2%;"></div>
+        </div>
+        
+        <div class="taxon">
+            <span>Klebsiella pneumoniae <span class="percentage">12.7%</span></span>
+            <div class="bar" style="width: 12.7%;"></div>
+        </div>
+        
+        <div class="taxon">
+            <span>Pseudomonas aeruginosa <span class="percentage">8.3%</span></span>
+            <div class="bar" style="width: 8.3%;"></div>
+        </div>
+        
+        <div class="taxon">
+            <span>Streptococcus pneumoniae <span class="percentage">6.1%</span></span>
+            <div class="bar" style="width: 6.1%;"></div>
+        </div>
+        
+        <div class="taxon">
+            <span>Haemophilus influenzae <span class="percentage">4.8%</span></span>
+            <div class="bar" style="width: 4.8%;"></div>
+        </div>
+        
+        <div class="taxon">
+            <span>Others <span class="percentage">24.5%</span></span>
+            <div class="bar" style="width: 24.5%; background: #ccc;"></div>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9em; color: #666;">
+            <strong>Note:</strong> This is a mock visualization. Replace with actual Kraken2 results.
+        </p>
+    </div>
+</body>
+</html>
